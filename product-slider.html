@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product slider</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
+
+
+<style>
+
+    /* Quantity button  */
+    form {
+float: left;
+  width: 110px;
+  /* margin: 0 auto; */
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 11px;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 35px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;  
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 0px 0 0 0px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 0px 0px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 35px;
+  height: 40px;
+  padding-bottom: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Quantity button end  */
+
+
+/* select color */
+
+
+
+.select {
+  position: relative;
+  float: right;
+  /* min-width: 200px; */
+
+}
+.select svg {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - -3px);
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+  stroke: #9098a9;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.select select {
+  -webkit-appearance: none;
+  padding: 10px 40px 10px 12px;
+  width: 100%;
+  border: 1px solid #e8eaed;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+  margin-top: 5px;
+}
+.select select:required:invalid {
+  color: #5a667f;
+}
+.select select option {
+  color: #223254;
+}
+.select select option[value=""][disabled] {
+  display: none;
+}
+.select select:focus {
+  outline: none;
+  border-color: #07f;
+  box-shadow: 0 0 0 2px rgba(0,119,255,0.2);
+}
+.select select:hover + svg {
+  stroke: #07f;
+}
+.sprites {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* select color */
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+			<div class="slider autoplay QPR-slider-container">
+				<div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/9.png" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">Morning Cleanser</h3>
+                        <h4 class="QPR-prod-price">14.40 USD <span>16.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/10.jpg" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">Vitamin C Serum</h3>
+                        <h4 class="QPR-prod-price">15.70 USD <span>16.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/11.jpg" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">Organix Facial Moisturizer</h3>
+                        <h4 class="QPR-prod-price">13.40 USD <span>15.30 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/12.jpg" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">SPF50 Sunscreen Protection</h3>
+                        <h4 class="QPR-prod-price">11.40 USD <span>13.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/13.jpg" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">Morning Cleanser</h3>
+                        <h4 class="QPR-prod-price">12.40 USD <span>15.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/14.png" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">Morning Cleanser</h3>                        
+                        <h4 class="QPR-prod-price">14.40 USD <span>15.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/15.png" alt="">
+                        </div>
+                        <h3 class="QPR-prod-name">Morning Cleanser</h3>
+                        <h4 class="QPR-prod-price">14.40 USD <span>18.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+                <div class="QPR-slider">					
+                    <div class="QPR-pro-block">
+                        <div class="QPR-block-img">
+                            <img src="img/12.jpg" alt="">
+                            
+                        </div>
+                        <h3 class="QPR-prod-name">Morning Cleanser</h3>
+                        <h4 class="QPR-prod-price">12.40 USD <span>17.00 USD</span></h4>
+                        <a href="#" class="QPR-prod-button">Add To Card</a>
+                    </div>              
+				</div>
+            </div>          
+
+
+
+<div class="QPR-containerPRo">
+    <div class="QPR-four-product">
+
+        <div class="QPR-first-sec">            
+            <div class="QPR-pro-block">
+                <div class="QPR-block-img">
+                    <img src="img/9.png" alt="">
+                </div>
+                <div class="QPR-pro-text">
+                    <p class="QPR-product-vender">Vender</p>
+                    <a href="#" class="QPR-prod-name">Morning Cleanser</a>
+
+
+
+                    <div class="QPR-button-qu">
+                         <!-- quantity button -->
+                    <form>
+                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                        <input type="number" id="number" value="0" />
+                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                      </form>
+                      <!-- quantity button -->
+
+
+                      <!-- selec color -->
+                      <label class="select" for="slct">
+                        <select id="slct" required="required">
+                          <option value="" disabled="disabled" selected="selected">Color</option>
+                          <option value="#">Red</option>
+                          <option value="#">Green</option>
+                          <option value="#">Blue</option>
+                          <option value="#">Black</option>
+                          <option value="#">White</option>
+                          <option value="#">Pink</option>
+                          <option value="#">Orange</option>
+                        </select>
+                        <svg>
+                          <use xlink:href="#select-arrow-down"></use>
+                        </svg>
+                      </label>
+                      <!-- SVG Sprites-->
+                      <svg class="sprites">
+                        <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                          <polyline points="1 1 5 5 9 1"></polyline>
+                        </symbol>
+                      </svg>
+
+                      <!-- selec color -->
+                    </div>
+                   
+
+
+
+                    <h4 class="QPR-prod-price">11.40 USD <span>15.00 USD</span></h4>
+                    <button class="QPR-prod-button">Add To Card</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="QPR-first-sec">  
+                    
+            <div class="QPR-pro-block">
+                <div class="QPR-block-img">
+                    <img src="img/10.jpg" alt="">                    
+                </div>
+                <div class="QPR-pro-text">
+                    <p class="QPR-product-vender">Vender</p>
+                    <a href="#" class="QPR-prod-name">Vitamin C Serum</a>
+                    <div class="QPR-button-qu">
+                        <!-- quantity button -->
+                   <form>
+                       <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                       <input type="number" id="number" value="0" />
+                       <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                     </form>
+                     <!-- quantity button -->
+
+
+                     <!-- selec color -->
+                     <label class="select" for="slct">
+                       <select id="slct" required="required">
+                         <option value="" disabled="disabled" selected="selected">Color</option>
+                         <option value="#">Red</option>
+                         <option value="#">Green</option>
+                         <option value="#">Blue</option>
+                         <option value="#">Black</option>
+                         <option value="#">White</option>
+                         <option value="#">Pink</option>
+                         <option value="#">Orange</option>
+                       </select>
+                       <svg>
+                         <use xlink:href="#select-arrow-down"></use>
+                       </svg>
+                     </label>
+                     <!-- SVG Sprites-->
+                     <svg class="sprites">
+                       <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                         <polyline points="1 1 5 5 9 1"></polyline>
+                       </symbol>
+                     </svg>
+
+                     <!-- selec color -->
+                   </div>
+                    <h4 class="QPR-prod-price">12.40 USD <span>16.00 USD</span></h4>
+                    <button class="QPR-prod-button">Add To Card</button>
+                </div>    
+            </div>
+        </div>
+
+
+        <div class="QPR-first-sec">            
+            <div class="QPR-pro-block">
+                <div class="QPR-block-img">
+                    <img src="img/11.jpg" alt="">
+                </div>
+                <div class="QPR-pro-text">
+                    <p class="QPR-product-vender">Vender</p>
+                    <a href="#" class="QPR-prod-name">Organix Facial Moisturizer</a>
+                    <div class="QPR-button-qu">
+                        <!-- quantity button -->
+                   <form>
+                       <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                       <input type="number" id="number" value="0" />
+                       <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                     </form>
+                     <!-- quantity button -->
+
+
+                     <!-- selec color -->
+                     <label class="select" for="slct">
+                       <select id="slct" required="required">
+                         <option value="" disabled="disabled" selected="selected">Color</option>
+                         <option value="#">Red</option>
+                         <option value="#">Green</option>
+                         <option value="#">Blue</option>
+                         <option value="#">Black</option>
+                         <option value="#">White</option>
+                         <option value="#">Pink</option>
+                         <option value="#">Orange</option>
+                       </select>
+                       <svg>
+                         <use xlink:href="#select-arrow-down"></use>
+                       </svg>
+                     </label>
+                     <!-- SVG Sprites-->
+                     <svg class="sprites">
+                       <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                         <polyline points="1 1 5 5 9 1"></polyline>
+                       </symbol>
+                     </svg>
+
+                     <!-- selec color -->
+                   </div>
+                    <h4 class="QPR-prod-price">13.40 USD <span>17.00 USD</span></h4>
+                    <button class="QPR-prod-button">Add To Card</button>
+                </div>    
+            </div>
+        </div>
+
+
+        <div class="QPR-first-sec">                 
+            <div class="QPR-pro-block">
+                <div class="QPR-block-img">
+                    <img src="img/12.jpg" alt="">
+                    
+                </div>
+                <div class="QPR-pro-text">
+                    <p class="QPR-product-vender">Vender</p>
+                    <a href="#" class="QPR-prod-name">SPF50 Sunscreen Protection</a>
+                    <div class="QPR-button-qu">
+                        <!-- quantity button -->
+                   <form>
+                       <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                       <input type="number" id="number" value="0" />
+                       <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                     </form>
+                     <!-- quantity button -->
+
+
+                     <!-- selec color -->
+                     <label class="select" for="slct">
+                       <select id="slct" required="required">
+                         <option value="" disabled="disabled" selected="selected">Color</option>
+                         <option value="#">Red</option>
+                         <option value="#">Green</option>
+                         <option value="#">Blue</option>
+                         <option value="#">Black</option>
+                         <option value="#">White</option>
+                         <option value="#">Pink</option>
+                         <option value="#">Orange</option>
+                       </select>
+                       <svg>
+                         <use xlink:href="#select-arrow-down"></use>
+                       </svg>
+                     </label>
+                     <!-- SVG Sprites-->
+
+
+
+
+                     <svg class="sprites">
+                       <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                         <polyline points="1 1 5 5 9 1"></polyline>
+                       </symbol>
+                     </svg>
+
+
+                     
+
+                     <!-- selec color -->
+
+
+
+                   </div>
+                    <h4 class="QPR-prod-price">11.40 USD <span>15.00 USD</span></h4>
+                    <button class="QPR-prod-button">Add To Card</button>
+                    
+                </div>
+                                     
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="QPR-pro-detils">
+    <div class="QPR-photo-side-sec">    
+        
+        <div class="slider slider-for img-sell">
+            <div>
+                <img src="img/10.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/11.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/12.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/13.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/14.png" alt="">
+            </div>
+        </div>
+        <div class="slider slider-nav img-sell IMG-NECC">
+            <div>
+                <img src="img/10.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/11.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/12.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/13.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/14.png" alt="">
+            </div>
+        </div>
+        </div>
+
+
+    <div class="QPR-deatilsside">
+        <h2 class="main-title">All Natural Face Cleanser</h2>
+        <h3 class="QPR-price"><span>$52.00</span>&nbsp;&nbsp;&nbsp;&nbsp;$32.00 Sale</h3>
+
+        <div class="QPR-button">
+            <div class="addcard"><button>Add To Card</button></div>
+            <div class="buy"><button> Buy Now</button></div>
+        </div>
+        
+        <hr class="hr1">
+        
+        <p class="QPR-normal-text">All Natural Face Scrub for Men & Women</p>
+        <p class="QPR-normal-text">Exfoliating Face Wash Improves Skin Texture, Unclogs Pores, Helps Prevent Blackheads & Ingrown Hairs</p>
+        <p class="QPR-normal-text">– Made In USA –</p>
+        <p class="QPR-normal-text">Vegan Facial Scrub Women & Mens Exfoliator</p>
+        <p class="QPR-normal-text"> Type : XYZ </p>
+        <p class="QPR-normal-text">Intensity: Strong</p>
+        <p class="QPR-normal-text">Your face is up against a lot of agents that wish to do it harm throughout the day (exhaust fumes, your dirty phone screen, etc). A Vitamin C Serum sees to it that none of those stressors cause long term damage to your skin.</p>
+        <hr class="hr1">
+
+        <div class="QPR-socil">
+            <div class="socil">
+                <a href="#">
+                    <img src="img/facebook (2).png" alt="">
+                </a>
+            </div>
+            <div class="socil">
+                <a href="#">
+                    <img src="img/twitter (1).png" alt="">
+                </a>
+            </div>
+            <div class="socil">
+                <a href="#">
+                    <img src="img/instagram (1).png" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+            
+
+
+
+
+    <script src="js/slick/jquery-1.11.0.min.js"></script>
+    <script src="js/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/style.js"></script>
+</body>
+</html>

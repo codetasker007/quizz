@@ -1,0 +1,1599 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.QPR-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-main .QPR-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  /* Modal Content */
+  /* The Close Button */
+}
+
+.QPR-main .QPR-wraper .QPR-main-heaiding {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.QPR-main .QPR-wraper .QPR-main-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+}
+
+.QPR-main .QPR-wraper .QPR-main-button {
+  padding: 13px 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 15px;
+}
+
+.QPR-main .QPR-wraper .QPR-main-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-main .QPR-wraper .QPR-main-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-main .QPR-wraper .QPR-main-button:hover {
+  color: #fff;
+}
+
+.QPR-main .QPR-wraper .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: white;
+  /* Black w/ opacity */
+}
+
+.QPR-main .QPR-wraper .modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.QPR-main .QPR-wraper .modal-content h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.QPR-main .QPR-wraper .modal-content form #text-QPR {
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0.1px solid;
+  border-left: 0px;
+  border-color: black;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.QPR-main .QPR-wraper .modal-content form #text-QPR::-webkit-input-placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-main .QPR-wraper .modal-content form #text-QPR:-ms-input-placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-main .QPR-wraper .modal-content form #text-QPR::-ms-input-placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-main .QPR-wraper .modal-content form #text-QPR::placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-main .QPR-wraper .modal-content form .QPR-imput {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.QPR-main .QPR-wraper .modal-content form .QPR-button {
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 15px;
+}
+
+.QPR-main .QPR-wraper .modal-content form .QPR-button .QPR-button-link {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3S ease-in-out;
+  transition: all 0.3S ease-in-out;
+  font-size: 15px;
+  padding: 13px 40px;
+}
+
+.QPR-main .QPR-wraper .modal-content form .QPR-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-main .QPR-wraper .modal-content form .QPR-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-main .QPR-wraper .modal-content form .QPR-button:hover .QPR-button-link {
+  color: #fff;
+}
+
+.QPR-main .QPR-wraper .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 68px;
+  font-weight: bold;
+}
+
+.QPR-main .QPR-wraper .close:hover,
+.QPR-main .QPR-wraper .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.QPR-sec-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-sec-main .QPR-sec-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.QPR-sec-main .QPR-sec-wraper .QPR-sec-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.QPR-sec-main .QPR-sec-wraper .QPR-sec-main-text span {
+  color: #e9b97a;
+}
+
+.QPR-sec-main .QPR-sec-wraper .QRP-redio {
+  border: 1px solid #000;
+  margin: 0 auto 15px auto;
+}
+
+.QPR-sec-main .QPR-sec-wraper .QRP-redio label {
+  color: #666;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.QPR-sec-main .QPR-sec-wraper form {
+  max-width: 610px;
+  margin: 30px auto 0 auto;
+}
+
+.QPR-sec-main .QPR-sec-wraper form .QPR-sec-button-align {
+  text-align: center;
+}
+
+.QPR-sec-main .QPR-sec-wraper form .QPR-sec-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 10px;
+  height: 45px;
+}
+
+.QPR-sec-main .QPR-sec-wraper form .QPR-sec-button .QPR-sec-button-link {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3S ease-in-out;
+  transition: all 0.3S ease-in-out;
+  font-size: 15px;
+  text-align: center;
+  padding: 12px 30px;
+}
+
+.QPR-sec-main .QPR-sec-wraper form .QPR-sec-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-sec-main .QPR-sec-wraper form .QPR-sec-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-sec-main .QPR-sec-wraper form .QPR-sec-button:hover .QPR-sec-button-link {
+  color: #fff;
+}
+
+.QPR-therd-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-therd-main .QPR-therd-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 920px;
+}
+
+.QPR-therd-main .QPR-therd-wraper .QPR-therd-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.QPR-therd-main .QPR-therd-wraper .QPR-main-therd-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 28px;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li {
+  list-style: none;
+  width: 455px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li a {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  height: 70px;
+  padding-top: 12px;
+  padding-left: 11px;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li a img {
+  width: 48px;
+  float: left;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li a p {
+  padding: 0 0 0 10px;
+  font-size: 17px;
+  float: left;
+  line-height: 47px;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li:hover {
+  background: #333;
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li:hover a img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.QPR-therd-main .QPR-therd-wraper ul li:hover a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.QPR-four-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-four-main .QPR-four-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 610px;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-main-four-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-button-align {
+  text-align: center;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-button {
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 17px;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-button .QPR-four-button-link {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3S ease-in-out;
+  transition: all 0.3S ease-in-out;
+  font-size: 15px;
+  text-align: center;
+  padding: 13px 40px;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-four-main .QPR-four-wraper .QPR-four-button:hover .QPR-four-button-link {
+  color: #fff;
+}
+
+.QPR-five-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-five-main .QPR-five-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.QPR-five-main .QPR-five-wraper .QPR-five-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.QPR-five-main .QPR-five-wraper .QPR-five-main-text span {
+  color: #e9b97a;
+}
+
+.QPR-five-main .QPR-five-wraper .QRP-five-redio {
+  border: 1px solid #000;
+  margin: 0 auto 10px auto;
+}
+
+.QPR-five-main .QPR-five-wraper .QRP-five-redio label {
+  color: #666;
+  font-size: 18px;
+  padding: 15px;
+  display: block;
+}
+
+.QPR-five-main .QPR-five-wraper .QRP-five-redio label a {
+  text-decoration: none;
+  color: #666;
+  width: 96%;
+  display: inline-block;
+}
+
+.QPR-five-main .QPR-five-wraper form {
+  max-width: 610px;
+  margin: 30px auto 0 auto;
+}
+
+.QPR-six-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-six-main .QPR-six-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 920px;
+}
+
+.QPR-six-main .QPR-six-wraper .QPR-six-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.QPR-six-main .QPR-six-wraper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 28px;
+}
+
+.QPR-six-main .QPR-six-wraper ul li {
+  list-style: none;
+  width: 455px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.QPR-six-main .QPR-six-wraper ul li a {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  height: 70px;
+  padding-top: 12px;
+  padding-left: 11px;
+}
+
+.QPR-six-main .QPR-six-wraper ul li a img {
+  width: 48px;
+  float: left;
+}
+
+.QPR-six-main .QPR-six-wraper ul li a p {
+  padding: 0 0 0 10px;
+  font-size: 17px;
+  float: left;
+  line-height: 47px;
+}
+
+.QPR-six-main .QPR-six-wraper ul li:hover {
+  background: #333;
+}
+
+.QPR-six-main .QPR-six-wraper ul li:hover a img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.QPR-six-main .QPR-six-wraper ul li:hover a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.QPR-seven-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-seven-main .QPR-seven-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.QPR-seven-main .QPR-seven-wraper .QPR-seven-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.QPR-seven-main .QPR-seven-wraper .QPR-main-seven-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  color: #3d3d3d;
+}
+
+.QPR-seven-main .QPR-seven-wraper .QRP-seven-redio {
+  border: 1px solid #000;
+  margin: 0 auto 8px auto;
+}
+
+.QPR-seven-main .QPR-seven-wraper .QRP-seven-redio label {
+  color: #666;
+  font-size: 18px;
+  display: block;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.QPR-seven-main .QPR-seven-wraper form {
+  max-width: 610px;
+  margin: 30px auto 0 auto;
+}
+
+.QPR-seven-main .QPR-seven-wraper form .QPR-seven-button-align {
+  text-align: center;
+}
+
+.QPR-seven-main .QPR-seven-wraper form .QPR-seven-button {
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 10px;
+}
+
+.QPR-seven-main .QPR-seven-wraper form .QPR-seven-button .QPR-seven-button-link {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3S ease-in-out;
+  transition: all 0.3S ease-in-out;
+  font-size: 15px;
+  text-align: center;
+  padding: 13px 40px;
+}
+
+.QPR-seven-main .QPR-seven-wraper form .QPR-seven-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-seven-main .QPR-seven-wraper form .QPR-seven-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-seven-main .QPR-seven-wraper form .QPR-seven-button:hover .QPR-seven-button-link {
+  color: #fff;
+}
+
+.QPR-eight-main {
+  position: relative;
+  height: 100vh;
+}
+
+.QPR-eight-main .QPR-eight-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 610px;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-main-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-main-eight-text {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  color: #3d3d3d;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-input-email {
+  max-width: 300px;
+  margin: 30px auto 0 auto;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-input-email #text-email {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+  font-size: 22px;
+  padding-left: 7px;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-input-email #text-email::-webkit-input-placeholder {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-input-email #text-email:-ms-input-placeholder {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-input-email #text-email::-ms-input-placeholder {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-input-email #text-email::placeholder {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-button-align {
+  text-align: center;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-button {
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 20px;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-button .QPR-eight-button-link {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3S ease-in-out;
+  transition: all 0.3S ease-in-out;
+  font-size: 15px;
+  text-align: center;
+  padding: 13px 40px;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-eight-main .QPR-eight-wraper .QPR-eight-button:hover .QPR-eight-button-link {
+  color: #fff;
+}
+
+.cross {
+  position: relative;
+}
+
+.cross a {
+  text-decoration: none;
+  color: black;
+  z-index: 11;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.QPR-last-main-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.QPR-last-main-container .QPR-last-heading {
+  margin: 40px 0;
+  font-weight: 100;
+  color: #303030;
+  font-size: 32px;
+}
+
+.QPR-last-main-container .QPR-last-text {
+  font-size: 22px;
+  font-weight: 100;
+  color: #666;
+  margin: 35px 0;
+}
+
+.QPR-last-main-container .QPR-last-text span {
+  color: black;
+  font-weight: 900;
+}
+
+.QPR-last-main-container .QPR-last-text a {
+  color: #666;
+}
+
+.QPR-last-main-container .QPR-last-button-align {
+  text-align: left;
+}
+
+.QPR-last-main-container .QPR-last-button {
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 0;
+  margin-top: 20px;
+}
+
+.QPR-last-main-container .QPR-last-button .QPR-last-button-link {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3S ease-in-out;
+  transition: all 0.3S ease-in-out;
+  font-size: 15px;
+  text-align: center;
+  padding: 13px 40px;
+}
+
+.QPR-last-main-container .QPR-last-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.QPR-last-main-container .QPR-last-button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.QPR-last-main-container .QPR-last-button:hover .QPR-last-button-link {
+  color: #fff;
+}
+
+.QPR-last-main-container .QPR-bg-yellow {
+  background-color: rgba(254, 225, 116, 0.45);
+  display: inline-block;
+  padding: 3px 5px 3px 40px;
+  margin: 12px 0;
+  position: relative;
+}
+
+.QPR-last-main-container .QPR-bg-yellow::before {
+  content: "\263C";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+}
+
+.QPR-last-main-container .QPR-bg-blue {
+  background-color: rgba(126, 212, 255, 0.35);
+  display: inline-block;
+  padding: 3px 5px 3px 33px;
+  margin: 12px 0;
+  position: relative;
+}
+
+.QPR-last-main-container .QPR-bg-blue::before {
+  content: "\263D";
+  -webkit-transform: rotate(34deg);
+          transform: rotate(34deg);
+  position: absolute;
+  left: 7px;
+  top: -2px;
+}
+
+.QPR-last-main-container .QPR-four-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 0;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec {
+  width: 275px;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-title {
+  font-size: 23px;
+  font-weight: 900;
+  padding: 30px 0;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-block-img {
+  width: 228px;
+  height: 228px;
+  margin: 20px auto 20px auto;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-block-img img {
+  width: 100%;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-prod-name {
+  text-align: center;
+  font-size: 20px;
+  margin: 25px 0;
+  font-weight: 100;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-prod-price {
+  text-align: center;
+  font-size: 18px;
+  margin: 25px 0;
+  font-weight: 100;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-prod-price span {
+  color: #929292;
+  text-decoration: line-through;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-prod-button {
+  padding: 15px 0;
+  background-color: #333;
+  cursor: pointer;
+  border: 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  position: relative;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-prod-button::after {
+  content: "\002B";
+  position: absolute;
+  right: 7px;
+  font-size: 30px;
+  top: 8px;
+}
+
+.QPR-last-main-container .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-prod-button:hover {
+  opacity: .8;
+}
+
+.QPR-slider-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 50px auto;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block {
+  padding: 10px;
+  max-width: 96%;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-block-img {
+  width: 228px;
+  height: 228px;
+  margin: 20px auto 20px auto;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-block-img img {
+  width: 100%;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-prod-name {
+  text-align: center;
+  font-size: 20px;
+  margin: 25px 0;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-prod-price {
+  text-align: center;
+  font-size: 18px;
+  margin: 25px 0;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-prod-price span {
+  color: #ce0000;
+  text-decoration: line-through;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-prod-button {
+  padding: 15px 0;
+  background-color: #333;
+  cursor: pointer;
+  border: 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 170px;
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-prod-button::after {
+  content: "\002B";
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  top: 6px;
+}
+
+.QPR-slider-container .QPR-slider .QPR-pro-block .QPR-prod-button:hover {
+  opacity: .8;
+}
+
+.QPR-containerPRo {
+  width: 100%;
+  margin: 0 auto;
+  background: #dee3e6;
+  padding: 50px 0;
+}
+
+.QPR-containerPRo .QPR-four-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px auto;
+  max-width: 1160px;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec {
+  width: 265px;
+  background: #fff;
+  position: relative;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-title {
+  font-size: 23px;
+  font-weight: 900;
+  padding: 30px 0;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block {
+  padding: 0px;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-block-img {
+  width: 228px;
+  height: 228px;
+  margin: 20px auto 20px auto;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-block-img img {
+  width: 100%;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text {
+  background: #eeeaeb;
+  padding: 10px;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-product-vender {
+  font-size: 14px;
+  opacity: 0.5;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-prod-name {
+  font-size: 19px;
+  padding: 5px 0 0 0;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-prod-price {
+  font-size: 15px;
+  margin: 9px 0;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  clear: both;
+  letter-spacing: 1px;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-prod-price span {
+  color: #ce0000;
+  text-decoration: line-through;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-prod-button {
+  padding: 10px 0 10px 0px;
+  cursor: pointer;
+  border: 0;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  background: #000;
+  font-family: 'Lato', sans-serif;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-prod-button::after {
+  content: "\002B";
+  position: absolute;
+  font-size: 30px;
+  padding-left: 7px;
+  top: 0px;
+}
+
+.QPR-containerPRo .QPR-four-product .QPR-first-sec .QPR-pro-block .QPR-pro-text .QPR-prod-button:hover {
+  opacity: .8;
+}
+
+.QPR-pro-detils {
+  width: 100%;
+  max-width: 1160px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.QPR-pro-detils .QPR-photo-side-sec {
+  max-width: 580px;
+}
+
+.QPR-pro-detils .QPR-photo-side-sec .img-sell img {
+  width: 100%;
+}
+
+.QPR-pro-detils .QPR-photo-side-sec .IMG-NECC {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.QPR-pro-detils .QPR-photo-side-sec .slick-next:before {
+  font-family: 'slick';
+  font-size: 61px;
+  line-height: 1;
+  opacity: .95;
+  content: "\203A" !important;
+  color: #000;
+}
+
+.QPR-pro-detils .QPR-photo-side-sec .slick-prev:before {
+  font-family: 'slick';
+  font-size: 61px;
+  line-height: 1;
+  opacity: .95;
+  content: "\2039" !important;
+  color: #000;
+}
+
+.QPR-pro-detils .QPR-deatilsside {
+  width: 580px;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.QPR-pro-detils .QPR-deatilsside .main-title {
+  font-size: 35px;
+  font-family: 'Lato', sans-serif;
+}
+
+.QPR-pro-detils .QPR-deatilsside .QPR-price {
+  font-size: 25px;
+  color: #557b97;
+  font-weight: 500;
+  margin-top: 25px;
+  font-family: 'Lato', sans-serif;
+}
+
+.QPR-pro-detils .QPR-deatilsside .QPR-price span {
+  text-decoration: line-through;
+  color: #c9d5df;
+}
+
+.QPR-pro-detils .QPR-button {
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.QPR-pro-detils .QPR-button .addcard {
+  width: 190px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.QPR-pro-detils .QPR-button .addcard button {
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  color: black;
+  padding: 15px 0;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  border: 0;
+  background-color: transparent;
+}
+
+.QPR-pro-detils .QPR-button .buy {
+  text-align: center;
+  width: 190px;
+  background: #000;
+}
+
+.QPR-pro-detils .QPR-button .buy button {
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  display: block;
+  padding: 15px 0;
+  font-weight: 700;
+  border: 0;
+  background-color: transparent;
+}
+
+.QPR-pro-detils .QPR-normal-text {
+  color: #69727b;
+  font-family: 'Lato', sans-serif;
+  margin: 30px  0;
+}
+
+.QPR-pro-detils .hr1 {
+  margin-top: 50px;
+}
+
+.QPR-pro-detils .QPR-socil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.QPR-pro-detils .QPR-socil .socil {
+  width: 60px;
+  padding: 15px;
+}
+
+.QPR-pro-detils .QPR-socil .socil img {
+  width: 100%;
+}
+
+.QPR-pro-detils label {
+  color: #69727b;
+  font-family: 'Lato', sans-serif;
+  margin: 30px  0;
+  font-size: 21px;
+}
+
+.QPR-pro-detils select {
+  padding: 10px 40px;
+}
+
+.QPR-pro-detils select option {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1162px) {
+  .QPR-pro-detils .QPR-photo-side-sec {
+    max-width: 595px;
+    margin: 0 auto;
+  }
+  .QPR-pro-detils .QPR-deatilsside {
+    width: 595px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .QPR-last-main-container .QPR-four-product {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .QPR-last-main-container .QPR-last-heading {
+    padding: 0 40px;
+  }
+  .QPR-last-main-container .QPR-last-text {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .QPR-containerPRo .QPR-four-product {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .QPR-containerPRo .QPR-four-product .QPR-first-sec {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 909px) {
+  .QPR-therd-main .QPR-therd-wraper ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .QPR-six-main .QPR-six-wraper ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .slick-next {
+    right: 2px !important;
+  }
+  .slick-prev {
+    left: 2px !important;
+    z-index: 4444;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .QPR-main .QPR-wraper .QPR-main-text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .QPR-main .QPR-wraper .QPR-main-heaiding {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .QPR-seven-main .QPR-seven-wraper .QPR-seven-main-text {
+    font-size: 22px;
+    margin-top: 70px;
+  }
+  .cross {
+    display: none;
+  }
+  .QPR-last-main-container .QPR-last-heading {
+    font-size: 27px;
+  }
+  .QPR-last-main-container .QPR-last-text {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  .QPR-last-main-container .QPR-last-button {
+    margin-left: 10px;
+  }
+  .QPR-slider-container .QPR-slider .QPR-pro-block {
+    max-width: 100%;
+  }
+  .QPR-pro-detils .QPR-deatilsside {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+  .QPR-pro-detils .QPR-photo-side-sec {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .QPR-main .QPR-wraper .modal-content form .QPR-imput {
+    width: 200px;
+  }
+  .QPR-main .QPR-wraper .modal-content h2 {
+    font-size: 26px;
+  }
+  .QPR-sec-main .QPR-sec-wraper form {
+    padding: 0 10px;
+  }
+  .QPR-sec-main .QPR-sec-wraper .QPR-sec-main-text {
+    font-size: 23px;
+  }
+  .QPR-four-main .QPR-four-wraper .QPR-main-four-text {
+    font-size: 17px;
+  }
+  .QPR-five-main .QPR-five-wraper form {
+    padding: 0 10px;
+  }
+  .QPR-five-main .QPR-five-wraper .QRP-five-redio label a {
+    width: 90%;
+  }
+  .QPR-six-main .QPR-six-wraper ul {
+    padding: 0 10px;
+  }
+  .QPR-seven-main .QPR-seven-wraper .QPR-main-seven-text {
+    font-size: 18px;
+  }
+  .QPR-seven-main .QPR-seven-wraper .QPR-seven-main-text {
+    line-height: 24px;
+    margin-top: 180px;
+  }
+  .QPR-seven-main .QPR-seven-wraper form {
+    padding: 0 10px;
+  }
+  .QPR-eight-main .QPR-eight-wraper .QPR-eight-main-text {
+    font-size: 24px;
+  }
+  .QPR-eight-main .QPR-eight-wraper .QPR-main-eight-text {
+    font-size: 17px;
+  }
+  .QPR-pro-detils .QPR-deatilsside .main-title {
+    font-size: 28px;
+  }
+  .QPR-pro-detils .QPR-deatilsside .QPR-price {
+    font-size: 20px;
+    margin-top: 13px;
+  }
+  .QPR-pro-detils .QPR-button {
+    margin-top: 23px;
+  }
+  .QPR-pro-detils .QPR-normal-text {
+    font-size: 14px;
+    margin: 17px 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .QPR-five-main .QPR-five-wraper .QRP-five-redio label a {
+    width: 90%;
+    font-size: 15px;
+  }
+  .QPR-six-main .QPR-six-wraper .QPR-six-main-text {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .QPR-seven-main .QPR-seven-wraper .QRP-seven-redio label {
+    font-size: 16px;
+  }
+}
